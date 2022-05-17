@@ -65,13 +65,13 @@ Este projeto é divido em duas partes:
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). [Mysql](https://dev.mysql.com/downloads/installer/), Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e uma ferramenta para banco de dados como [DBeaver](https://dbeaver.io/download/).
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). [Mysql](https://dev.mysql.com/downloads/installer/), Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/) e uma ferramenta para banco de dados como [DBeaver](https://dbeaver.io/download/)
 
 #### 🎲 Rodando o Backend (servidor)
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+$ git clone git@github.com:wilson6g/iblue-school-back.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd iblue-school-back
 # Instale as dependências
@@ -92,7 +92,7 @@ $ npm run dev ou yarn dev
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+$ git clone git@github.com:wilson6g/iblue-school-front.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd iblue-school-front
 # Instale as dependências
