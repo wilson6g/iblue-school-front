@@ -78,10 +78,8 @@ $ cd iblue-school-back
 $ npm install ou yarn install
 # Crie um arquivo .env na raiz do projeto
 $ touch .env ou crie um arquivo pela IDE
-# Vá para o arquivo .env.example
-$ copie os dados do .env.example e cole no .env
-# Altere os dados do .env 
-$ Mude para os dados do seu ambiente
+# Vá para o arquivo .env.example e copie os dados do .env.example e cole no .env
+# Altere os dados do .env e mude para os dados do seu ambiente
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev ou yarn dev
 # O servidor iniciará na porta:3333 por padrão - acesse http://localhost:3333
@@ -92,7 +90,7 @@ $ npm run dev ou yarn dev
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:wilson6g/iblue-school-front.git
+$ git clone git@github.com:tgmarinho/README-ecoleta.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd iblue-school-front
 # Instale as dependências

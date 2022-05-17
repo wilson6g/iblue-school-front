@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import Toastify from "toastify-js";
 import { operation } from "../services/operations-service/basic-operation";
 
 export default {
@@ -89,27 +90,42 @@ export default {
       this.result = [];
       this.numbers = [];
       this.test = "";
-      this.calculation = 0;
+      this.calculation = "";
     },
     async makeCalculation() {
-      var numbers = {
-        numbers: this.numbers,
-      };
+      try {
+        var numbers = {
+          numbers: this.numbers,
+        };
 
-      if (this.result.length == 0) {
-        const { data } = await operation(numbers);
-        this.result.push(data);
-      } else {
-        var getLastResult = this.result[this.result.length - 1].toString();
+        if (this.result.length == 0) {
+          const { data } = await operation(numbers);
+          this.result.push(data);
+        } else {
+          var getLastResult = this.result[this.result.length - 1].toString();
 
-        var newCalculation = getLastResult.concat(
-          this.numbers[this.numbers.length - 1]
-        );
+          var newCalculation = getLastResult.concat(
+            this.numbers[this.numbers.length - 1]
+          );
 
-        this.numbers.push(newCalculation);
+          this.numbers.push(newCalculation);
 
-        const { data } = await operation(numbers);
-        this.result.push(data);
+          const { data } = await operation(numbers);
+          this.result.push(data);
+        }
+      } catch (error) {
+        Toastify({
+          text: `${error.response.status}: ${error.response.data.message}`,
+          duration: 3000,
+          newWindow: true,
+          close: true,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "linear-gradient(to right, #ff0000, #ff0000)",
+          },
+        }).showToast();
       }
     },
   },
@@ -148,13 +164,13 @@ export default {
 .calculator-keys {
   display: grid;
   grid-template:
-    "history-display history-display history-display history-display history-display"
-    "display display display display display "
-    "sum subtract multiply division percent "
-    "seven eight nine equal square "
-    "four five six equal . "
-    "one two three equal ."
-    "zero dot ac equal .";
+    "history-display history-display history-display history-display "
+    "display display display display "
+    "sum subtract multiply division  "
+    "seven eight nine percent  "
+    "four five six square "
+    "one two three equal"
+    "zero dot ac equal";
 }
 
 .operation-percent {
@@ -168,6 +184,7 @@ export default {
 .operation-sum {
   grid-area: sum;
 }
+
 .operation-subtract {
   grid-area: subtract;
 }

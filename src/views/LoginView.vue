@@ -162,7 +162,7 @@ img {
   height: 20%;
   color: var(--black);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0.5rem;
 }
 
