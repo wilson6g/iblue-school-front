@@ -4,7 +4,7 @@ node_modules
 
 
 # local env files
-.env.local
+.env
 .env.*.local
 
 # Log files
@@ -12,6 +12,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+yarn.lock*
 
 # Editor directories and files
 .idea
