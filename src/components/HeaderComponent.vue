@@ -21,9 +21,9 @@
 <script>
 export default {
   name: "HeaderComponent",
-  data: function () {},
   methods: {
     logout: function () {
+      localStorage.clear();
       this.$router.push("/");
     },
   },

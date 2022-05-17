@@ -57,6 +57,8 @@ export default {
 
         const response = await loginUser(data);
 
+        localStorage.setItem("fundamental_two", response.data.fundamental_two);
+
         Toastify({
           text: `${response.status}: Usuário logado com sucesso!`,
           duration: 3000,
@@ -70,7 +72,9 @@ export default {
           },
         }).showToast();
 
-        this.$router.push("/home");
+        response.data.fundamental_two == false
+          ? this.$router.push("/home")
+          : this.$router.push("/advanced");
       } catch (error) {
         Toastify({
           text: `${error.response.status}: ${error.response.data.message}`,
