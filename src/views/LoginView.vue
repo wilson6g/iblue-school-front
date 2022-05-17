@@ -64,9 +64,9 @@ export default {
           duration: 3000,
           newWindow: true,
           close: true,
-          gravity: "top", // `top` or `bottom`
-          position: "right", // `left`, `center` or `right`
-          stopOnFocus: true, // Prevents dismissing of toast on hover
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
           style: {
             background: "linear-gradient(to right, #00b09b, #96c93d)",
           },
@@ -81,9 +81,9 @@ export default {
           duration: 3000,
           newWindow: true,
           close: true,
-          gravity: "top", // `top` or `bottom`
-          position: "right", // `left`, `center` or `right`
-          stopOnFocus: true, // Prevents dismissing of toast on hover
+          gravity: "top",
+          position: "right",
+          stopOnFocus: true,
           style: {
             background: "linear-gradient(to right, #ff0000, #ff0000)",
           },
