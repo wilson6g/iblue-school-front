@@ -34,20 +34,17 @@ Projeto desenvolvido durante o **Programa de Estágio da IBlue Consulting** ofer
 
 ---
 
-## 💻 Regras de negócio
-🖥️ A aplicação deve redirecionar o usuário para uma calculadora de acordo com sua escolaridade;
-🖥️ A aplicação deve retornar uma mensagem para cada erro no sistema; 
-🧍 O usuário não pode cadastrar o mesmo e-mail mais de um vez;
-🧍 O usuário deve ter um e-mail válido;
-🧍 O usuário deve ter uma senha com mais de 6 caracteres e menos de 13 caracteres;
-🧍 Todos os campos do registro e login do usuário deve fazer a verificação de tipo, se o campo é nulo e/ou se é obrigatório;
-🖩 A calculadora só deve mostrar determinadas operações matemáticas, de acordo com seu nível de escolaridade;
-🖩 A calculadora só deve aceitar caracteres numerais [0 a 9] e sinais aritimeticos [+ - * / . % √];
-🖩 A calculadora não deve fazer operações matemáticas, caso envie o campo nulo;
-🖩 A calculadora deve retornar "NaN" ou uma mensagem de erro caso seja enviado só com a operação matemática e sem nenhum número; 
-
-Projeto desenvolvido durante o **Programa de Estágio da IBlue Consulting** oferecido pela [IBlueConsulting](https://www.iblueconsulting.com.br/).
-
+## 🖥️ Regras de negócio
+#### 🖥️ A aplicação deve redirecionar o usuário para uma calculadora de acordo com sua escolaridade;
+#### 🖥️ A aplicação deve retornar uma mensagem para cada erro no sistema; 
+#### 🧍 O usuário não pode cadastrar o mesmo e-mail mais de um vez;
+#### 🧍 O usuário deve ter um e-mail válido;
+#### 🧍 O usuário deve ter uma senha com mais de 6 caracteres e menos de 13 caracteres;
+#### 🧍 Todos os campos do registro e login do usuário deve fazer a verificação de tipo, se o campo é nulo e/ou se é obrigatório;
+#### 🖩 A calculadora só deve mostrar determinadas operações matemáticas, de acordo com seu nível de escolaridade;
+#### 🖩 A calculadora só deve aceitar caracteres numerais [0 a 9] e sinais aritimeticos [+ - * / . % √];
+#### 🖩 A calculadora não deve fazer operações matemáticas, caso envie o campo nulo;
+#### 🖩 A calculadora deve retornar "NaN" ou uma mensagem de erro caso seja enviado só com a operação matemática e sem nenhum número; 
 ---
 
 ## ⚙️ Funcionalidades
@@ -87,6 +84,8 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 #### 🎲 Rodando o Backend (servidor)
 
 ```bash
+# Verifique que você já possui os pré-requisitos instalados
+# Crie um banco de dados, as tabelas vão ser geradas automáticamente quando terminar todos esses passos
 # Clone este repositório
 $ git clone git@github.com:wilson6g/iblue-school-back.git
 # Acesse a pasta do projeto no terminal/cmd
@@ -100,7 +99,9 @@ $ touch .env ou crie um arquivo pela IDE
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev ou yarn dev
 # O servidor iniciará na porta:3333 por padrão - acesse http://localhost:3333
-# Observação: Essa porta é referente ao NODE_PORT presente no .env, se você alterar, terá que mudar a porta "3333" para a que você definiu. 
+# Observações: 
+# Essa porta é referente ao NODE_PORT presente no .env, se você alterar, terá que mudar a porta "3333" para a que você definiu.
+# Você pode alterar o DIALECT no .env, para um banco de dados da sua preferência... postgress, por exemplo... consulte a documentação do sequelize.
 ```
 
 #### 🧭 Rodando a aplicação web (Frontend)
