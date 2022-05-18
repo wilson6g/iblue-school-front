@@ -22,7 +22,8 @@
           placeholder="Digite sua senha"
         />
         <select v-model="schooling" type="text" class="select-schooling">
-          <option value="1" selected>Fundamental 1</option>
+          <option disabled value="0">Selecione uma escolaridade</option>
+          <option value="1">Fundamental 1</option>
           <option value="2">Fundamental 2</option>
         </select>
 
