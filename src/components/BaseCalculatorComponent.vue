@@ -2,7 +2,7 @@
   <div class="calculator">
     <div class="calculator-keys">
       <div class="history-display">
-        {{ this.calculation }}
+        {{ this.display }}
       </div>
       <div class="calculator-display">{{ result[result.length - 1] }}</div>
 
@@ -50,8 +50,8 @@ export default {
     return {
       numbers: [],
       result: [],
-      test: "",
-      calculation: "",
+      calculate: "",
+      display: "",
       zero: 0,
       one: 1,
       two: 2,
@@ -73,20 +73,20 @@ export default {
   methods: {
     addKeys: function (value) {
       if (value == "=") {
-        this.numbers.push(this.test);
-        this.test = "";
+        this.numbers.push(this.calculate);
+        this.calculate = "";
         this.makeCalculation();
       }
       if (value != "=") {
-        this.calculation += value.toString();
-        this.test += value.toString();
+        this.display += value.toString();
+        this.calculate += value.toString();
       }
     },
     clearCalculationResult: function () {
       this.result = [];
       this.numbers = [];
-      this.test = "";
-      this.calculation = 0;
+      this.calculate = "";
+      this.display = 0;
     },
     async makeCalculation() {
       try {
