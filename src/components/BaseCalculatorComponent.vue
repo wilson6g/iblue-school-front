@@ -86,7 +86,7 @@ export default {
       this.result = [];
       this.numbers = [];
       this.calculate = "";
-      this.display = 0;
+      this.display = "";
     },
     async makeCalculation() {
       try {
@@ -135,15 +135,15 @@ export default {
   background-color: #000;
 }
 
-@media (min-width: 100px) and (max-width: 767px){
+@media (min-width: 100px) and (max-width: 767px) {
   .calculator {
-      width: 70vw;
+    width: 70vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .calculator {
-      width: 40vw;
+    width: 40vw;
   }
 }
 
