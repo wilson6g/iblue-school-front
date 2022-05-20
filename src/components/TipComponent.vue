@@ -3,7 +3,12 @@
     <strong class="title-tip"> Como usar as novas operações: </strong>
     <div class="content-tip">
       <p>
-        💡 Para utilizar porcentagem, siga o exemplo: <strong>100%15</strong>
+        💡 Para fazer subtração com porcentagem, siga o exemplo:
+        <strong>100-15%</strong>
+      </p>
+      <p>
+        💡 Para fazer soma com porcentagem, siga o exemplo:
+        <strong>100+15%</strong>
       </p>
       <p>
         💡 Para utilizar raiz quadrada, siga o exemplo: <strong>50√</strong>

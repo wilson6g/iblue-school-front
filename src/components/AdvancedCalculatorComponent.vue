@@ -100,6 +100,7 @@ export default {
 
         if (this.result.length == 0) {
           const { data } = await operation(numbers);
+          console.log(await operation(numbers));
           this.result.push(data);
         } else {
           var getLastResult = this.result[this.result.length - 1].toString();
@@ -111,11 +112,13 @@ export default {
           this.numbers.push(newCalculation);
 
           const { data } = await operation(numbers);
+          console.log(await operation(numbers));
           this.result.push(data);
         }
       } catch (error) {
+        console.log('aqui', error);
         Toastify({
-          text: `${error.response.status}: ${error.response.data.message}`,
+          text: `${error.response?.status}: ${error.response?.data?.message}`,
           duration: 3000,
           newWindow: true,
           close: true,
@@ -139,15 +142,15 @@ export default {
   background-color: #000;
 }
 
-@media (min-width: 100px) and (max-width: 767px){
+@media (min-width: 100px) and (max-width: 767px) {
   .calculator {
-      width: 70vw;
+    width: 70vw;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .calculator {
-      width: 40vw;
+    width: 40vw;
   }
 }
 
